@@ -7,6 +7,16 @@
 
 I2C driver for the SH1107 OLED display written in 100% Rust
 
+This fork just nudges the DisplayOffset two pixels to make the noise
+rows on the left of the display go away (at least on my hardware,
+AdaFruit 64x128 OLED FeatherWing). I have no idea why this is
+needed, since the C++ driver which worked on the same hardware
+appears to use 0x60.
+
+This is not tested on any other hardware, so I'm not planning to
+make it public. But if you ended up here to find a solution to
+this specific problem on this specific hardware, have at it.
+
 ## [Documentation](https://docs.rs/sh1107)
 
 From [`examples/text.rs`](examples/text.rs):
